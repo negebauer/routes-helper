@@ -5,6 +5,9 @@
   "license": "MIT",
   "author": "Nicolas Gebauer <hello@negebauer.com> (https://negebauer.com)",
   "repository": "https://github.com/negebauer/routes-helper",
+  "bugs": {
+    "url": "https://github.com/negebauer/routes-helper/issues"
+  },
   "version": "0.1.1",
   "main": "index.js",
   "scripts": {
@@ -15,5 +18,10 @@
   "devDependencies": {
     "prettier-package-json": "^2.1.3",
     "standard-version": "^7.0.1"
-  }
+  },
+  "keywords": [
+    "path",
+    "react-router",
+    "routes"
+  ]
 }
