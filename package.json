@@ -1,5 +1,6 @@
 {
-  "name": "routes-helper",
+  "private": false,
+  "name": "@negebauer/routes-helper",
   "description": "Helper for creating routes object and building paths from them",
   "license": "MIT",
   "author": "Nicolas Gebauer <hello@negebauer.com> (https://negebauer.com)",
