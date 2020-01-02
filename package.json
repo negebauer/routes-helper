@@ -5,12 +5,15 @@
   "license": "MIT",
   "author": "Nicolas Gebauer <hello@negebauer.com> (https://negebauer.com)",
   "repository": "https://github.com/negebauer/routes-helper",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "index.js",
   "scripts": {
-    "lint:package": "prettier-package-json --write package.json"
+    "lint:package": "prettier-package-json --write package.json",
+    "release": "standard-version",
+    "postrelease": "git push --follow-tags && yarn publish --non-interactive --access public"
   },
   "devDependencies": {
-    "prettier-package-json": "^2.1.3"
+    "prettier-package-json": "^2.1.3",
+    "standard-version": "^7.0.1"
   }
 }
