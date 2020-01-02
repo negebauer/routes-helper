@@ -1,0 +1,9 @@
+{
+  "name": "routes-helper",
+  "version": "0.1.0",
+  "description": "Helper for creating routes object and building paths from them",
+  "main": "index.js",
+  "repository": "https://github.com/negebauer/routes-helper",
+  "author": "Nicolas Gebauer <hello@negebauer.com> (https://negebauer.com)",
+  "license": "MIT"
+}
