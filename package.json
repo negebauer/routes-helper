@@ -18,6 +18,9 @@
     "postrelease": "git push --follow-tags && yarn publish --non-interactive --access public",
     "test": "jest"
   },
+  "dependencies": {
+    "path-to-regexp": "^6.1.0"
+  },
   "devDependencies": {
     "@negebauer/eslint-config-base": "^1.1.0",
     "@negebauer/prettier-config": "^1.0.3",
