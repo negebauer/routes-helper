@@ -30,12 +30,13 @@ const routes = buildRoutes({
 
 const json = routesToJson(routes)
 
-console.log('routes object')
+console.log('# routes object')
 console.log(routes)
 
-console.log('json routes object')
+console.log('# json routes object')
 console.log(json)
 
+console.log('\n# examples')
 console.log(`routes.home()\n\t${routes.home()}`)
 console.log(`routes.users.user.friends()\n\t${routes.users.user.friends()}`)
 
