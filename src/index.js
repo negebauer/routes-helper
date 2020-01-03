@@ -1,2 +1,9 @@
-// eslint-disable-next-line no-console
-console.log('hello')
+const buildRoutes = require('./build-routes')
+const buildToPath = require('./build-to-path')
+const routesToJson = require('./routes-to-json')
+
+module.exports = {
+  buildRoutes,
+  routesToJson,
+  buildToPath,
+}

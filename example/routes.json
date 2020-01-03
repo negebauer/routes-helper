@@ -1,0 +1,24 @@
+{
+  "home": "/",
+  "feed": "/cool-feed",
+  "session": {
+    "login": "/session/login",
+    "root": "/session"
+  },
+  "dashboard": {
+    "graphs": "/dashboard/graphs",
+    "charts": "/dashboard/charts",
+    "root": "/dashboard"
+  },
+  "users": {
+    "user": {
+      "friends": "/users/:userId/friends",
+      "root": "/users/:userId"
+    },
+    "root": "/users"
+  },
+  "bestPlaces": {
+    "place": "/best_places/:placeId",
+    "root": "/best_places"
+  }
+}
