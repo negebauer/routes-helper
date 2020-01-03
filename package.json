@@ -17,7 +17,7 @@
     "lint:package": "prettier-package-json --write package.json",
     "release": "standard-version",
     "postrelease": "git push --follow-tags && yarn publish --non-interactive --access public",
-    "test": "jest"
+    "test": "jest --watch"
   },
   "dependencies": {
     "path-to-regexp": "^6.1.0"
