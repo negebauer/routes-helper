@@ -1,6 +1,6 @@
 # Routes helper <!-- omit in TOC -->
 
-Helper functions for creating a routes object with deeply nested routes and path generators using `[path-to-regexp](https://github.com/pillarjs/path-to-regexp)`
+Helper functions for creating a routes object with deeply nested routes and path generators using [`path-to-regexp`](https://github.com/pillarjs/path-to-regexp)
 
 - [Development](#development)
 
