@@ -2,16 +2,16 @@ function routesToJson(routes) {
   const json = {}
 
   Object.keys(routes).forEach(routeKey => {
-    const childRoutes = routes[routeKey]
-    const childRoutesKeys = Object.keys(childRoutes)
+    const getRoute = routes[routeKey]
+    const childRoutesKeys = Object.keys(getRoute)
 
     if (childRoutesKeys.length === 0) {
-      json[routeKey] = childRoutes()
+      json[routeKey] = getRoute()
       return
     }
 
-    json[routeKey] = routesToJson(childRoutes)
-    json[routeKey].root = childRoutes()
+    json[routeKey] = routesToJson(getRoute)
+    json[routeKey].root = getRoute()
   })
 
   return json

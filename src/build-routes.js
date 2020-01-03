@@ -20,20 +20,20 @@
  * - `routes.users.user()` => `/users/:userId`
  * - `routes.users.user.friends()` => `/users/:userId/friends`
  *
- * @param {Object} routesObject
+ * @param {Object} rawRoutes
  * @param {string?} [root]
  */
-function buildRoutes(routesObject, root = '') {
-  const finalRoutesObject = {}
+function buildRoutes(rawRoutes, root = '') {
+  const routesObject = {}
 
-  Object.keys(routesObject).forEach(routeKey => {
-    const childRoutesObjectOrString = routesObject[routeKey]
+  Object.keys(rawRoutes).forEach(routeKey => {
+    const childRoutesObjectOrString = rawRoutes[routeKey]
 
     if (
       typeof childRoutesObjectOrString === 'string' ||
       !childRoutesObjectOrString
     ) {
-      finalRoutesObject[routeKey] = function getRoute() {
+      routesObject[routeKey] = function getRoute() {
         return `${root}/${childRoutesObjectOrString || routeKey}`
       }
       return
@@ -45,23 +45,22 @@ function buildRoutes(routesObject, root = '') {
         ? `${root}/${__pathName}`
         : `${root}/${routeKey}`
     if (Object.keys(childRoutesObject).length === 0) {
-      finalRoutesObject[routeKey] = function getRoute() {
+      routesObject[routeKey] = function getRoute() {
         return path
       }
       return
     }
 
-    finalRoutesObject[routeKey] = function getRoute() {
+    routesObject[routeKey] = function getRoute() {
       return path
     }
     const builtChildRoutes = buildRoutes(childRoutesObject, path)
     Object.keys(builtChildRoutes).forEach(childRouteKey => {
-      finalRoutesObject[routeKey][childRouteKey] =
-        builtChildRoutes[childRouteKey]
+      routesObject[routeKey][childRouteKey] = builtChildRoutes[childRouteKey]
     })
   })
 
-  return finalRoutesObject
+  return routesObject
 }
 
 module.exports = buildRoutes
